@@ -1,5 +1,7 @@
+'use client'
 import React from 'react'
 import Link from "next/link";
+import { useState, useEffect } from 'react';
 
 const navlinks =[
     {
@@ -17,10 +19,24 @@ const navlinks =[
         linkto:"/about"
     }
 ]
-const Navbar = () => {
-  return (
-    <div className=' w-full py-8 px-25 navbar flex justify-between'>
 
+
+const Navbar = () => {
+
+    const [scrolled, setScrolled] = useState(false);      // using usestate to track the scorll postion and setting the scrolled state to true or false
+    useEffect(() => {                                     // useEffect is React’s way of handling:  "Do something after rendering" 
+
+        const handleScroll = () => {
+            setScrolled(window.scrollY > 10);                // checking if the scroll is done or not if done the setScrolled will be ture
+        }
+
+        window.addEventListener('scroll',handleScroll);           // we are adding event listener to the window 
+        return ()=> window.removeEventListener('scroll',handleScroll);
+    }
+
+    )
+  return ( 
+    <div className={` fixed  z-5 w-full py-8 px-25 navbar flex justify-between ${scrolled ? "backdrop-blur-sm" : ""}`} >                {/*here we check if the condition is true or not and hten adding background blur */}
         <div><p className='font-[Gabarito] font-bold text-2xl '>jacob.</p></div>
         <div className='flex gap-20'>
             {
