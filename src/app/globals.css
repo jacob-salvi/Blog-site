@@ -3,25 +3,19 @@
 @import "tailwindcss";
 
 
-@font-face {
-    font-family: 'luminorySerif';
-    src: url(/public/fonts/luminaryserif-bold.otf) format('opentype');
+
+
+/* @font-face {
+    font-family: 'DMSerif';
+    src: url(/public/fonts/DMSerifText-Regular.ttf) format('truetype');
     font-weight: bold ;
     font-style: normal;
-}
+} */
 
-@font-face {
-    font-family: 'luminorySerif';
-    src: url(/public/fonts/luminary-serif.bold-italic.ttf) format('opentype');
-    font-weight: bold ;
-    font-style: italic;
-}
 
-.font-luminorySerif {
-    font-family: 'luminorySerif';
-    font-style: italic;
-}
+
 
 body{
     background: #FFFAE7;
+    
 }
