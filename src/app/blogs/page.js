@@ -3,6 +3,7 @@ import path from 'path';
 import { compileMDX } from 'next-mdx-remote/rsc';
 import Link from 'next/link';
 import BlogsCard from '@/components/BlogsCard';
+import Navbar from '@/components/Navbar';
 import CategoryNav from '@/components/CategoryNav';
 
 export default async function BlogList() {
@@ -36,11 +37,13 @@ export default async function BlogList() {
       
       return(
         <>
-          <CategoryNav/>
-        <div className='grid grid-cols-3 p-25'>
+        <div className='flex flex-col '>
+          <Navbar/>
+
+        <CategoryNav/>
+        </div>
+        <div className='grid grid-cols-3 px-25'>
           <BlogsCard Blogs={allBlogs}/>
-
-
         </div>
         </>
       )

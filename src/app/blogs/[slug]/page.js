@@ -1,6 +1,7 @@
 import { promises as fs } from 'fs';
 import path from 'path';
 import { compileMDX } from 'next-mdx-remote/rsc';
+import Navbar from '@/components/Navbar';
 
 export default async function BlogPage({params}) {
     params = await params
@@ -34,7 +35,8 @@ export default async function BlogPage({params}) {
     }) 
 
     return (
-        <div className="max-w-2xl mx-auto py-12">
+        <div className="">
+            <Navbar/>
         <h1 className="text-3xl font-bold mb-2">{frontmatter.title}</h1>
         <p className="text-sm text-gray-500 mb-6">
           By {frontmatter.author} on {frontmatter.date}
@@ -42,4 +44,5 @@ export default async function BlogPage({params}) {
         <div className="prose dark:prose-invert">{content}</div>
       </div>
       );
+      
 }

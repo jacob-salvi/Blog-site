@@ -3,22 +3,7 @@ import React from 'react'
 import Link from "next/link";
 import { useState, useEffect } from 'react';
 
-const navlinks =[
-    {
-        name: "Work",
-        linkto:"/work"
-    },
-
-    {
-        name:"Blogs",
-        linkto:"/blogs"
-    },
-
-    {
-        name:"Who am I?",
-        linkto:"/about"
-    }
-]
+const navlinks =[ 'work', 'blogs', 'Who am I?']
 
 
 const Navbar = () => {
@@ -40,12 +25,12 @@ const Navbar = () => {
         <div><p className='font-[Gabarito] font-bold text-2xl text-[#2a2a2a] '>jacob.</p></div>
         <div className='flex gap-20'>
             {
-            navlinks.map((links,index) => (
-                <Link  key={index} href="/work" className="group overflow-hidden  h-6  relative cursor-pointer block">
+            navlinks.map((links) => (
+                <Link  key={links} href={`/${links}`} className="group overflow-hidden  h-6  relative cursor-pointer block">
                     <div className=" flex flex-col transition-all duration-300 ease-in-out group-hover:-translate-y-6 " >
 
-                        <div className='text-[#2a2a2a] font-[Gabarito] text-[1rem] font-bold'>{links.name}</div>
-                        <div className='text-[#2a2a2a] font-[Gabarito] text-[1rem] font-bold'>{links.name}</div>
+                        <div className='text-[#2a2a2a] font-[Gabarito] text-[1rem] font-bold capitalize'>{links}</div>
+                        <div className='text-[#2a2a2a] font-[Gabarito] text-[1rem] font-bold capitalize'>{links}</div>
                     </div>
                 </Link>
                     ))
