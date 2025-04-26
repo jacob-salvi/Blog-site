@@ -1,17 +1,12 @@
-import Image from "next/image";
+import React from 'react'
+import Navbar from '../components/Navbar'
+import TagAnimation from '../components/Animations/TagAnimation'
+import TimeTag from '../components/TimeTag'
 import { Gabarito, DM_Serif_Text } from 'next/font/google';
-import FancyTag from "@/components/FancyTag";
-import Navbar from "@/components/Navbar";
-import TagAnimation from "@/components/Animations/TagAnimation";
-import TimeTag from "@/components/TimeTag";
-import Noiseoverlay from "@/components/Noiseoverlay";
 
-
-
-
-export default function Home() {
+const hero = () => {
   return (
-    <div className="Main bg-[#FFFAE7]h-screen w-screen relative">
+<div className="Main bg-[#FFFAE7]h-screen w-screen relative">
       
       <div className="homecontent bg-[#88B7BD]  overflow-hidden  w-full h-[85vh]   bg-cover">
           <Navbar />
@@ -42,6 +37,7 @@ export default function Home() {
 
       </div>
     </div>
-      
-  );
+  )
 }
+
+export default hero

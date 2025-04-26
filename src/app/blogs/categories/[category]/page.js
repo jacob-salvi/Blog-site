@@ -54,16 +54,6 @@ export default async function BlogPage({params}) {
 }
 
 
-
-
-
-
-
-
-
-
-
-
 // export default async function BlogPage({params}) {
 //     params = await params
 //     const {category} = params

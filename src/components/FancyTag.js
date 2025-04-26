@@ -3,7 +3,7 @@ import React from 'react'
 const Colormap = {
     blueCream:{
         textColor: '#2A2A2A',
-        bgColor:'#FFF0B3',
+        bgColor:'#fef2c4',
         cornerSqr:'#88B7BD',
         borderColor:'#2A2A2A',
     },
@@ -23,10 +23,18 @@ const Colormap = {
     }
 }
 
-const FancyTag = ({ variant = "blueCream", text, rotation, top, left, right, bottom }) => {  
+const FancyTag = ({ variant = "blueCream", text, rotation, top, left, right, bottom, zindex }) => {  
     const { textColor, bgColor, cornerSqr, borderColor}   = Colormap[variant] || Colormap.blueCream;      // destructuring the variant prop with a default value of "blueCream"
   return (
-    <div className='outterdiv relative  w-fit h-auto  ' style={{borderColor: borderColor, transform: `rotate(${rotation}deg)`, top: `${top}rem`, left:`${left}rem`, right:`${right}rem`, bottom:`${bottom}rem`}} >
+    <div className='outterdiv relative  w-fit h-auto  ' style={{
+      borderColor: borderColor,
+       transform: `rotate(${rotation}deg)`
+       ,zIndex:zindex,
+        top: `${top}rem`,
+         left:`${left}rem`,
+          right:`${right}rem`,
+           bottom:`${bottom}rem`
+           }} >
       {/* <div className='topright absolute w-[11px] h-[11px] right-[-5.5px] top-[-5.5px] border-2' style={{ borderColor:borderColor, backgroundColor:cornerSqr}}></div>
       <div className='topleft absolute w-[11px] h-[11px] left-[-5.5px] top-[-5.5px] border-2' style={{ borderColor:borderColor, backgroundColor:cornerSqr}}></div>
       <div className='bottomleft absolute w-[11px] h-[11px] left-[-5.5px] bottom-[-5.5px] border-2' style={{ borderColor:borderColor, backgroundColor:cornerSqr}}></div>
