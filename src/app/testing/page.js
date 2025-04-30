@@ -9,43 +9,53 @@ import Navbar from '@/components/Navbar';
 import Hero from '@/screens/hero';
 import Story from '@/screens/story';
 import { Gabarito, DM_Serif_Text } from 'next/font/google';
+import Header from '@/components/blogs/header';
+import Thumbnail from '@/components/blogs/thumbnail';
+import Blogbody from '@/components/blogs/blogBody';
+import { fetchMdxData } from '@/utils/fetchMdxData';
 
 
 
 export default async function BlogList() {
-  const rootdir = path.join(process.cwd(), 'src', 'Content')
-      const categories =  await fs.readdir(rootdir)
+
+   const slug = 'my-first-code'
+    const {content, frontmatter} = await fetchMdxData(slug)
+
+  // const rootdir = path.join(process.cwd(), 'src', 'Content')
+  //     const categories =  await fs.readdir(rootdir)
   
-      let allBlogs = [];
+  //     let allBlogs = [];
   
-      for(const category of categories){
-          const categoryPath = path.join(rootdir, category)
-          const files = await fs.readdir(categoryPath)
+  //     for(const category of categories){
+  //         const categoryPath = path.join(rootdir, category)
+  //         const files = await fs.readdir(categoryPath)
 
-          const filesData = await Promise.all(files.map(async (filename)=>{
-            const data = await fs.readFile(path.join(categoryPath, filename), 'utf-8')
+  //         const filesData = await Promise.all(files.map(async (filename)=>{
+  //           const data = await fs.readFile(path.join(categoryPath, filename), 'utf-8')
 
-            const {frontmatter} = await compileMDX({
-              source:data,
-              options: {
-                parseFrontmatter: true
-              }
-            })
+  //           const {frontmatter} = await compileMDX({
+  //             source:data,
+  //             options: {
+  //               parseFrontmatter: true
+  //             }
+  //           })
 
-            return{
-              filename,
-              slug: filename.replace('.mdx', ''),
-              ... frontmatter
-            }
-          }))
-          allBlogs.push(... filesData)
-      }
+  //           return{
+  //             filename,
+  //             slug: filename.replace('.mdx', ''),
+  //             ... frontmatter
+  //           }
+  //         }))
+  //         allBlogs.push(... filesData)
+  //     }
       
       return(
         <>
         
-        <Hero/>
-        <Story/>
+        <Header frontmatter={frontmatter}/>
+        <Thumbnail frontmatter={frontmatter}/>
+        <Blogbody content={content}/>
+        
 
 
 

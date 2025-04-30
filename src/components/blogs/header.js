@@ -1,24 +1,14 @@
+import React from 'react'
+import Navbar from '../Navbar'
+import CategoryNav from '../CategoryNav'
 
-import { promises as fs } from 'fs';
-import path from 'path';
-import { compileMDX } from 'next-mdx-remote/rsc';
-import { fetchMdxData } from '@/utils/fetchMdxData';
-import Navbar from '@/components/Navbar';
-import CategoryNav from '@/components/CategoryNav';
-import { DM_Serif_Text, Gabarito } from 'next/font/google';
 
-export default async function BlogPage({params}) {
-    params = await params
-    const {slug} = params
-
-    const {content, frontmatter} = await fetchMdxData(slug)
-
-    return (
-
-        <div className='main w-[100vw] h-full flex flex-col'>
-            <Navbar/>
-            <CategoryNav/>
-            <div className='head-section w-full h-[50vh] px-25  pt-0 bg-[#FFFAE7] '>
+const header = ({frontmatter}) => {
+  return (
+    <div>
+      <Navbar/>
+        <CategoryNav/>
+        <div className='head-section w-full h-[50vh] px-25  pt-0 bg-[#FFFAE7] '>
                <div className='head-content w-full h-full flex flex-col justify-between '> 
                     <div className='text-contianer'>
                         
@@ -43,12 +33,8 @@ export default async function BlogPage({params}) {
                     </div>
                 </div>
             </div>
-            <div className='thumbnai-section w-full h-full object-cover'>
-                <img src={frontmatter.coverimage} className='w-full h-[100vh] object-cover'/>
-            </div>
-
-            <div className='w-1/2 '>{content}</div>
-        </div>
-      );
-      
+    </div>
+  )
 }
+
+export default header
