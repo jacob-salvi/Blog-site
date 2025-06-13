@@ -6,7 +6,7 @@ import { useRouter } from 'next/navigation'
 import { usePathname } from 'next/navigation'
 
 
-const header = ({frontmatter}) => {
+const Header = ({frontmatter}) => {
 const [isClient, setIsClient] = useState(false);
   const router = useRouter();
   
@@ -56,4 +56,4 @@ const [isClient, setIsClient] = useState(false);
   )
 }
 
-export default header
+export default Header

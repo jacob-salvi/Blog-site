@@ -22,7 +22,7 @@ const Navbar = () => {
     )
   return ( 
     <div className={` fixed  z-5 w-full py-8 px-25 navbar flex justify-between ${scrolled ? "" : ""}`} >                {/*here we check if the condition is true or not and hten adding background blur */}
-        <div><a href='/' className='font-[Gabarito] font-bold text-2xl text-[#2a2a2a] '>jacob.</a></div>
+        <div><Link href='/' className='font-[Gabarito] font-bold text-2xl text-[#2a2a2a] '>jacob.</Link></div>
         <div className='flex gap-20'>
             {
             navlinks.map((links) => (
