@@ -40,7 +40,7 @@ const Story5 = () => {
     ref={textref} 
     className=' text w-[100vw] h-[100vh] flex flex-col gap-5  shrink-0  justify-center items-center leadingText text-6xl font-[Gabarito] font-bold tracking-[-4%] text-[#2a2a2a]'>
       <h1 className='bg-amber-50 z-10 w-full flex justify-start pr-20'> Not from someone who knows it all,</h1>
-      <h1 className='w-full bg-amber-50 flex justify-end pl-20'>but someone who’s figuring it out.</h1>
+      <h1 className='w-full bg-amber-50 flex justify-end pl-20'>but someone who's figuring it out.</h1>
       
     </div>
   )

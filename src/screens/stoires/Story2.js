@@ -61,7 +61,7 @@ const Story2 = () => {
     <div ref={storyref} className=' story w-[100vw] h-[100vh] flex shrink-0 flex-col gap-8  items-start justify-center '>
       <div className='w-fit flex gap-0 justify-between items-center bg-[#fffae7] '>
         <div
-        className=' leadingText text-6xl font-[Gabarito] font-bold tracking-[-4%] text-[#2a2a2a]'><h1 ref={leadingTextRef}>And most days, I’m just trying to </h1></div>
+        className=' leadingText text-6xl font-[Gabarito] font-bold tracking-[-4%] text-[#2a2a2a]'><h1 ref={leadingTextRef}>And most days, I'm just trying to </h1></div>
           <div className=' UiElement w-fit'>
             <div ref={figureref} className='relative '>
               <svg width="350" height="94" viewBox="0 0 320 94" fill="none" xmlns="http://www.w3.org/2000/svg">
