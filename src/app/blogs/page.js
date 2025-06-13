@@ -7,6 +7,10 @@ import Navbar from '@/components/Navbar';
 import CategoryNav from '@/components/CategoryNav';
 import { blogListFetch } from '@/utils/blogListFetch';
 
+export  const metadata = {
+  title: 'blogs - Jacob Salvi',
+}
+
 export default async function BlogList() {
 
 

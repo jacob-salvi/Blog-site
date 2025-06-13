@@ -15,7 +15,7 @@ const SingleBlogPost = ({latest}) =>{
                 <div className='font-[DM_Serif_Text] text-[3rem] leading-[3.1rem] tracking-[-4%]  text-[#FFFAE7]'>{latest.blogname}</div>
               </div>
               <div className='coverimage-desc  flex justify-between items-end '>
-                <div className='font-[Gabarito] font-normal max-w-[30%] tracking-[-4%] text-[#FFFAE7] leading-[1.3rem] text-[1.1rem]'>{latest.description}</div>
+                <div className='font-[Gabarito] font-normal max-w-[50%] tracking-[-4%] text-[#FFFAE7] leading-[1.3rem] text-[1.1rem]'>{latest.description}</div>
                 <div className='  h-[300px] object-cover '><img src={latest.coverimage} className='w-full h-full'/></div>
               </div>
             </div>
