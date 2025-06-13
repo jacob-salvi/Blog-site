@@ -10,6 +10,16 @@ import Header from '@/components/blogs/header';
 import Thumbnail from '@/components/blogs/thumbnail';
 import Blogbody from '@/components/blogs/blogBody';
 
+export async function generateMetadata({params}) {
+      const { slug } = params;
+  const { frontmatter } = await fetchMdxData(slug);
+
+  return {
+    title: frontmatter.blogname,
+    description: frontmatter.description || '',
+  };
+}
+
 export default async function BlogPage({params}) {
     params = await params
     const {slug} = params
@@ -17,7 +27,7 @@ export default async function BlogPage({params}) {
     const {content, frontmatter} = await fetchMdxData(slug)
 
     return (
-
+       
         <div className='main w-[100vw] h-full flex flex-col'>
             <CategoryNav/>
             <Header frontmatter={frontmatter}/>
