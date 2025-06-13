@@ -1,7 +1,7 @@
 import { promises as fs } from 'fs';
 import path from 'path';
 import { compileMDX } from 'next-mdx-remote/rsc';
-import {components} from '@/components/mdxComponents'
+import {components} from '@/lib/mdxComponent.js';
 
 export  async function fetchMdxData(slug) {
     
@@ -39,7 +39,7 @@ export  async function fetchMdxData(slug) {
             options:{
                 parseFrontmatter: true
             },
-            components:components // pass the components to the compileMDX function
+            components: components// pass the components to the compileMDX function
         }) 
    
         return (

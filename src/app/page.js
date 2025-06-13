@@ -5,16 +5,20 @@ import Navbar from "@/components/Navbar";
 import TagAnimation from "@/components/Animations/TagAnimation";
 import TimeTag from "@/components/TimeTag";
 import Noiseoverlay from "@/components/Noiseoverlay";
+import Story from "@/screens/story";
+import Highlight from "@/screens/highlight";
+import Footer from "@/screens/footer";
+import Hero from "@/screens/hero";
 
 
 
 
 export default function Home() {
   return (
-    <div className="Main bg-[#FFFAE7]h-screen w-screen relative">
+    <div className="Main h-fit w-screen relative">
       
-      <div className="homecontent bg-[#88B7BD]  overflow-hidden  w-full h-[85vh]   bg-cover">
-          <Navbar />
+      {/* <div className="homecontent bg-[#88B7BD]  overflow-hidden  w-full h-[85vh]   bg-cover">
+          
           
           <div className=" Text-Illustration flex justify-between items-center px-25 py-40 relative ">
             <img src="/assests/bigstar.svg"  className="absolute top-[14.5vw] left-[32.5vw] w-[4vw] h-[4vw] z-1" />
@@ -40,7 +44,11 @@ export default function Home() {
             <p className="font-[Gabarito] text-[1.2rem] font-bold tracking-[-4%] leading-none text-center">A blog about sharing creativity, mistakes, and <br/>the process of figuring things out.</p>
           </div>
 
-      </div>
+      </div> */}
+      <Hero/>
+      <Story/>
+      <Highlight/>
+      <Footer/>
     </div>
       
   );

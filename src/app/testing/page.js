@@ -8,11 +8,23 @@ import CategoryNav from '@/components/CategoryNav';
 import Navbar from '@/components/Navbar';
 import Hero from '@/screens/hero';
 import Story from '@/screens/story';
-import { Gabarito, DM_Serif_Text } from 'next/font/google';
+import { Gabarito, DM_Serif_Text, DM_Serif_Display } from 'next/font/google';
 import Header from '@/components/blogs/header';
 import Thumbnail from '@/components/blogs/thumbnail';
 import Blogbody from '@/components/blogs/blogBody';
 import { fetchMdxData } from '@/utils/fetchMdxData';
+
+import Story1 from '@/screens/stoires/Story1';
+import LatestBlogCard from '@/components/LatestBlogCard';
+
+import Highlight from '@/screens/highlight';
+import Story2 from '@/screens/stoires/Story2';
+import Story4 from '@/screens/stoires/Story4';
+import Callouts from '@/lib/MDXuiElements/callouts';
+import CodeBlock from '@/lib/MDXuiElements/codeblock';
+import Latestblogs from '@/screens/latestblogs';
+import WhoAmI from '@/screens/whoAmI';
+import Footer from '@/screens/footer';
 
 
 
@@ -20,6 +32,7 @@ export default async function BlogList() {
 
    const slug = 'my-first-code'
     const {content, frontmatter} = await fetchMdxData(slug)
+    
 
   // const rootdir = path.join(process.cwd(), 'src', 'Content')
   //     const categories =  await fs.readdir(rootdir)
@@ -52,10 +65,24 @@ export default async function BlogList() {
       return(
         <>
         
-        <Header frontmatter={frontmatter}/>
+        {/* <Header frontmatter={frontmatter}/>
         <Thumbnail frontmatter={frontmatter}/>
-        <Blogbody content={content}/>
+        <Blogbody content={content}/> */}
+        <main className='w-full h-full '>
+          <Highlight/>
+          <Story2/>
+          <Story4/>
+          <Callouts type='default'>Smartphones are no longer a thing for communication only: today, they cover multiple needs and  help us to solve a variety of problems. Mobile applications let us study and entertain, do a lot of basic operations in seconds,   </Callouts>
+          <span className='h-12'>h11</span>
+          <Callouts type='info'>Smartphones are no longer a thing for communication only: today, they cover multiple needs and  help us to solve a variety of problems. Mobile applications let us study and entertain, do a lot of basic operations in seconds,   </Callouts>
+        <CodeBlock/>
+        <WhoAmI/>
         
+        
+        {/* <Story/>
+        <Story1/> */}
+        </main>
+        <Footer/>
 
 
 

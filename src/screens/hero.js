@@ -3,13 +3,20 @@ import Navbar from '../components/Navbar'
 import TagAnimation from '../components/Animations/TagAnimation'
 import TimeTag from '../components/TimeTag'
 import { Gabarito, DM_Serif_Text } from 'next/font/google';
+import { Contrast } from 'lucide-react';
 
 const hero = () => {
   return (
-<div className="Main bg-[#FFFAE7]h-screen w-screen relative">
+<div className="Main bg-[#FFFAE7] h-fit w-screen relative">
       
-      <div className="homecontent bg-[#88B7BD]  overflow-hidden  w-full h-[85vh]   bg-cover">
-          <Navbar />
+      <div className="homecontent bg-[#88B7BD] relative overflow-hidden  w-full h-[85vh]   bg-cover">
+        {/* <div 
+            style={{
+              
+                backgroundImage: `url("data:image/svg+xml,%3C!-- svg: first layer --%3E%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='4' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")`,
+            }}
+            className='absolute inset-0 rounded-[.8rem] mix-blend-multiply'></div> */}
+          
           
           <div className=" Text-Illustration flex justify-between items-center px-25 py-40 relative ">
             <img src="/assests/bigstar.svg"  className="absolute top-[14.5vw] left-[32.5vw] w-[4vw] h-[4vw] z-1" />
@@ -36,6 +43,7 @@ const hero = () => {
           </div>
 
       </div>
+      
     </div>
   )
 }

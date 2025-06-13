@@ -3,7 +3,7 @@ import React from 'react'
 import Link from "next/link";
 import { useState, useEffect } from 'react';
 
-const navlinks =[ 'work', 'blogs', 'Who am I?']
+const navlinks =[ 'craft', 'blogs', 'whoAmi?']
 
 
 const Navbar = () => {
@@ -12,7 +12,7 @@ const Navbar = () => {
     useEffect(() => {                                     // useEffect is React’s way of handling:  "Do something after rendering" 
 
         const handleScroll = () => {
-            setScrolled(window.scrollY > 10);                // checking if the scroll is done or not if done the setScrolled will be ture
+            setScrolled(window.scrollY > -10);                // checking if the scroll is done or not if done the setScrolled will be ture
         }
 
         window.addEventListener('scroll',handleScroll);           // we are adding event listener to the window 
@@ -21,8 +21,8 @@ const Navbar = () => {
 
     )
   return ( 
-    <div className={` fixed  z-5 w-full py-8 px-25 navbar flex justify-between ${scrolled ? "backdrop-blur-sm" : ""}`} >                {/*here we check if the condition is true or not and hten adding background blur */}
-        <div><p className='font-[Gabarito] font-bold text-2xl text-[#2a2a2a] '>jacob.</p></div>
+    <div className={` fixed  z-5 w-full py-8 px-25 navbar flex justify-between ${scrolled ? "" : ""}`} >                {/*here we check if the condition is true or not and hten adding background blur */}
+        <div><a href='/' className='font-[Gabarito] font-bold text-2xl text-[#2a2a2a] '>jacob.</a></div>
         <div className='flex gap-20'>
             {
             navlinks.map((links) => (

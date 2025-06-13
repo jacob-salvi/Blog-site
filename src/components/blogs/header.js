@@ -1,18 +1,38 @@
-import React from 'react'
+'use client'
+import React, { useEffect, useState } from 'react'
 import Navbar from '../Navbar'
 import CategoryNav from '../CategoryNav'
+import { useRouter } from 'next/navigation'
+import { usePathname } from 'next/navigation'
 
 
 const header = ({frontmatter}) => {
+const [isClient, setIsClient] = useState(false);
+  const router = useRouter();
+  
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
+  const handleBack = () => {
+    if (!isClient) return;
+    
+    // Check if we have history to go back to
+    if (window.history.length > 1) {
+      router.back();
+    } else {
+      // Fallback to blog home if no history
+      
+      router.push('/blog');
+    }
+  };
+
   return (
-    <div>
-      <Navbar/>
-        <CategoryNav/>
         <div className='head-section w-full h-[50vh] px-25  pt-0 bg-[#FFFAE7] '>
                <div className='head-content w-full h-full flex flex-col justify-between '> 
                     <div className='text-contianer'>
                         
-                        <div className='back-btn w-fit flex justify-between items-center gap-3  mb-4'>
+                        <div onClick={handleBack} className='back-btn w-fit flex justify-between items-center gap-3  mb-4'>
                             <div className=''><svg width="30" height="30" viewBox="0 0 27 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M27 6.5H1M1 6.5C3.83333 5.83333 10 3.7 12 0.5M1 6.5C4.33333 7.16667 11.2 9.1 12 11.5" stroke="#2A2A2A"/>
                                 </svg>
@@ -33,7 +53,6 @@ const header = ({frontmatter}) => {
                     </div>
                 </div>
             </div>
-    </div>
   )
 }
 

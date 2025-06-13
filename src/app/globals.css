@@ -18,4 +18,21 @@
 body{
     background: #fffae7;
     
+    
+}
+
+/* styles/globals.css */
+.animated-label {
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+}
+
+.perspective-wrapper {
+  perspective: 1000px;
+}
+
+.grain-box{
+  background: url("data:image/svg+xml, %3Csvg viewBox='0 0 200 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch' /%3E%3C/filter%3E%3Crect width='200px' height='200px' filter='url(%23noise)'/%3E%3C/svg%3E");
+  filter: contrast(15%) brightness(65%) invert(100%);
+  mix-blend-mode: multiply;
 }

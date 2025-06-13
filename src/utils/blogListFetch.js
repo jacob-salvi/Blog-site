@@ -32,6 +32,7 @@ export async function blogListFetch(slug) {
               }))
               allBlogs.push(... filesData)
           }
+          allBlogs.sort((a, b) => new Date(b.std_date) - new Date(a.std_date))
 
     return allBlogs
 }
