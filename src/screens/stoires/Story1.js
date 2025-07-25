@@ -67,8 +67,7 @@ const Story1 = () => {
         <div className='  flex   flex-col w-full h-full justify-between items-center  px-20  '>
             <div className=' firstpart w-full  h-full flex  justify-center items-center gap-10 '>
             <div className=' heading1 h-1/2 w-fit  flex justify-center items-center  '>
-                <h1 className='text-6xl font-gabarito\
-                \ font-bold tracking-[-4%] text-[#2a2a2a] '> I'm learning — </h1>
+                <h1 className='text-6xl font-gabarito font-bold tracking-[-4%] text-[#2a2a2a] '> I'm learning — </h1>
             </div>
             <div className='flex justify-center items-center w-fit  '>
 

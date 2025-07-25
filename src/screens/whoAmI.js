@@ -30,7 +30,7 @@ const whoAmI = () => {
                     </div>
                 </div>
             </div>
-            <div className='bioofme  max-w-[80%] text-[1.3rem] tracking-[-4%] leading-[2rem] font-gabarito font-light'>
+            <div className='bioofme  max-w-[80%] text-[1.3rem] tracking-[-4%] leading-[2rem] font-gabarito font-regular '>
                 <p>I'm Jacob Salvi — someone who's still figuring things out. Mostly about design, programming, faith, and a whole lot of overthinking.I'm 19 (soon turning 20), and I don't really consider myself a professional in anything — but definitely a learner.<br/>
 I'm curious about building and designing creative things, and every day I try to learn something new that helps me make better stuff.
 Since finishing my diploma, I've been freelancing — and it's going pretty well. I get to work on the design side professionally, and in my free time, I dive into code. Programming helps me bring my own designs to life.

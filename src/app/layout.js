@@ -1,4 +1,5 @@
 import { Gabarito, DM_Serif_Text } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next"
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 
@@ -28,6 +29,7 @@ export default function RootLayout({ children }) {
       <body >
         <Navbar/>
         {children}
+         <Analytics />
       </body>
     </html>
   );

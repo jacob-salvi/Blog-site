@@ -58,7 +58,7 @@ useEffect(()=>{
   return (
     <div className='w-[100vw] h-[100vh] flex flex-col shrink-0 justify-center items-center  '>
       <div ref={containerref} className='w-fit h-fit p-10  bg-[#fffae7]  relative'>
-        <h1 ref={lineref} className='  text-[7rem] font-gabarito font-normal leading-[5.5rem] tracking-[-4%] text-[#2a2a2a]'>A place to <br/>Collect my</h1>
+        <h1 ref={lineref} className='  text-[7rem] font-dmSerifText font-normal leading-[5.5rem] tracking-[-4%] text-[#2a2a2a]'>A place to <br/>Collect my</h1>
         <div ref={wrapperRef}>
         <div className=' tag absolute  top-0 left-[-6%] w-fit h-fit p-3 bg-[#FEB1FF] rounded-3xl drop-shadow-2xl -rotate-12 '>
           <h1 className='text-[#5F0095] font-gabarito font-bold text-[2.5rem] leading-none tracking-[-6%]'>learnings</h1>
