@@ -13,16 +13,11 @@ import Header from '@/components/blogs/header';
 import Thumbnail from '@/components/blogs/thumbnail';
 import Blogbody from '@/components/blogs/blogBody';
 import { fetchMdxData } from '@/utils/fetchMdxData';
-
-import Story1 from '@/screens/stoires/Story1';
-import LatestBlogCard from '@/components/LatestBlogCard';
-
 import Highlight from '@/screens/highlight';
 import Story2 from '@/screens/stoires/Story2';
 import Story4 from '@/screens/stoires/Story4';
 import Callouts from '@/lib/MDXuiElements/callouts';
 import CodeBlock from '@/lib/MDXuiElements/codeblock';
-import Latestblogs from '@/screens/latestblogs';
 import WhoAmI from '@/screens/whoAmI';
 import Footer from '@/screens/footer';
 

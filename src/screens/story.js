@@ -92,7 +92,7 @@ const path = pathref.current;
   return (
 
    <div ref={outer} className='outercontainer  relative story w-full h-[100vh] overflow-hidden'>
-    <div className='w-full absolute  pt-20 pb-3 italic px-20 font-[DM_Serif_Text] text-[1.9rem] tracking-[-4%] leading-none  '>
+    <div className='w-full absolute  pt-20 pb-3 italic px-20 font-dmSerifText text-[1.9rem] tracking-[-4%] leading-none  '>
       Why i started this?
     </div>
    

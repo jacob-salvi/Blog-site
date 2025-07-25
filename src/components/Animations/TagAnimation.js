@@ -1,6 +1,5 @@
 'use client'
-
-import React, { use } from 'react'
+import React from 'react'
 import FancyTag from '../FancyTag'
 import { motion } from 'framer-motion'
 import { useState, useEffect } from 'react' 

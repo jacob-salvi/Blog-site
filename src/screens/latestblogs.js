@@ -11,11 +11,11 @@ const SingleBlogPost = ({latest}) =>{
           <Link href={`/blogs/${latest.slug}`}>
             <div className='blogdetails  w-full h-full  flex flex-col  p-20 justify-between  absolute z-10 top-0 left-0'>
               <div className='blogname flex  max-w-[80%] flex-col gap-2'>
-                <div className='flex w-fit h-fit px-1 text-[#2a2a2a]  font-[Gabarito] tracking-[-4%] font-semibold bg-[#FFF0B3] text-[.9rem]'>{latest.tag}</div>
-                <div className='font-[DM_Serif_Text] text-[3rem] leading-[3.1rem] tracking-[-4%]  text-[#FFFAE7]'>{latest.blogname}</div>
+                <div className='flex w-fit h-fit px-1 text-[#2a2a2a]  font-gabarito tracking-[-4%] font-semibold bg-[#FFF0B3] text-[.9rem]'>{latest.tag}</div>
+                <div className='font-dmSerifText text-[3rem] leading-[3.1rem] tracking-[-4%]  text-[#FFFAE7]'>{latest.blogname}</div>
               </div>
               <div className='coverimage-desc  flex justify-between items-end '>
-                <div className='font-[Gabarito] font-normal max-w-[50%] tracking-[-4%] text-[#FFFAE7] leading-[1.3rem] text-[1.1rem]'>{latest.description}</div>
+                <div className='font-gabarito font-normal max-w-[50%] tracking-[-4%] text-[#FFFAE7] leading-[1.3rem] text-[1.1rem]'>{latest.description}</div>
                 <div className='  h-[300px] object-cover '><img src={latest.coverimage} className='w-full h-full'/></div>
               </div>
             </div>
@@ -35,12 +35,12 @@ const MultipleBlogPost = ({recent, latest})=>{
       <Link href={`/blogs/${latest.slug}`}>
         <div className='latestblog w-[850px] h-auto text-[#2a2a2a] flex flex-col gap-2 '>
           <div className='flex w-full justify-between items-center '>
-           <div className='flex w-fit h-fit px-1 bg-[#2a2a2a]  font-[Gabarito] text-[#FFF0B3] font-semibold  text-[.9rem]'>{latest.tag}</div>
+           <div className='flex w-fit h-fit px-1 bg-[#2a2a2a]  font-gabarito text-[#FFF0B3] font-semibold  text-[.9rem]'>{latest.tag}</div>
             <h1 className=' text-[0.9rem] text-[#2a2a2a]/80 font-[DM_Serif_Text]  tracking-[-4%] '>{latest.date}</h1>
           </div>
           <div className='font-[DM_Serif_Text] text-[2rem] leading-none tracking-[-4%]'>{latest.blogname}</div>
           <div className='w-full '><img className='w-full h-auto' src={latest.coverimage}/></div>
-          <div className='font-[Gabarito] font-bold tracking-[-4%] text-[#2a2a2a] leading-none text-[1.1rem]'>{latest.description}</div>
+          <div className='font-gabarito font-bold tracking-[-4%] text-[#2a2a2a] leading-none text-[1.1rem]'>{latest.description}</div>
         </div>
       </Link>
         
@@ -53,7 +53,7 @@ const MultipleBlogPost = ({recent, latest})=>{
           <div  className=' w-fit h-fit flex flex-col gap-4   '>
           <div className='w-[210px] h-[210px] object-cover'><img className='w-full h-full' src={blogs.coverimage}/></div>
           <div className='textcontainer gap-2 max-w-[210px]'>
-            <div className='flex w-fit h-fit px-1 bg-[#2a2a2a] text-[#FFF0B3] font-[Gabarito] font-semibold  text-[.9rem]'>{blogs.tag}</div>
+            <div className='flex w-fit h-fit px-1 bg-[#2a2a2a] text-[#FFF0B3] font-gabarito font-semibold  text-[.9rem]'>{blogs.tag}</div>
             <h1 className=' w-full text-[1.2rem] text-[#2a2a2a] font-[DM_Serif_Text]  tracking-[-4%] '>{blogs.blogname}</h1>
             <h1 className=' text-[0.9rem] text-[#2a2a2a]/30 font-[DM_Serif_Text]  tracking-[-4%] '>{blogs.date}</h1>
           </div>
@@ -76,8 +76,8 @@ const latestblogs = ({latest, recent}) => {
 <    div className='w-full h-full py-20 px-[1.5rem] flex flex-col'>
       <div className='header flex '>
         <div className='text flex flex-col gap-0'>
-            <h1 className='text-[9rem] font-[Gabarito] font-bold tracking-[-4%] text-[#2a2a2a] leading-none'>Blogs.</h1>
-            <p className='text-[1.5rem] font-[DM_Serif_Text] tracking-[-4%] text-[#2a2a2a]/80 -mt-4 '>the Latest</p>
+            <h1 className='text-[9rem] font-gabarito font-bold tracking-[-4%] text-[#2a2a2a] leading-none'>Blogs.</h1>
+            <p className='text-[1.5rem] font-dmSerifText tracking-[-4%] text-[#2a2a2a]/80 -mt-4 '>the Latest</p>
         </div>
       </div>
       {recent.length === 0

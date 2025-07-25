@@ -1,15 +1,16 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Gabarito, DM_Serif_Text } from "next/font/google";
 import "./globals.css";
-import CustomCursor from "@/components/CustomCursor";
 import Navbar from "@/components/Navbar";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const gabarito = Gabarito({
+  variable: "--font-gabarito",
+  weight: ['400','500','600','700','800','900'],
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const dmSerifText = DM_Serif_Text({
+  variable: "--font-dmSerifText",
+  weight: ['400'],
   subsets: ["latin"],
 });
 
@@ -23,10 +24,9 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${gabarito.variable} ${dmSerifText.variable}`}>
       <body >
         <Navbar/>
-        {/* <CustomCursor/> */}
         {children}
       </body>
     </html>

@@ -41,7 +41,7 @@ const FancyTag = ({ variant = "blueCream", text, rotation, top, left, right, bot
       <div className='bottomright absolute w-[11px] h-[11px] right-[-5.5px] bottom-[-5.5px] border-2' style={{ borderColor:borderColor, backgroundColor:cornerSqr}}></div> */}
 
       <div className='w-fit h-auto flex justify-center items-center p-3 ' style={{backgroundColor: bgColor}}>
-        <h1 className='text-5xl font-bold font-[Gabarito] tracking-[-4%] leading-[48px]'  style={{color: textColor}}>
+        <h1 className='text-5xl font-bold font-gabarito tracking-[-4%] leading-[48px]'  style={{color: textColor}}>
           {text}
         </h1>
       </div>

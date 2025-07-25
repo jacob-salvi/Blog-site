@@ -1,9 +1,5 @@
-import { promises as fs } from 'fs'
-import path from 'path';
-import { compileMDX } from 'next-mdx-remote/rsc';
-import Link from 'next/link';
+import React from 'react';
 import BlogsCard from '@/components/BlogsCard';
-import Navbar from '@/components/Navbar';
 import CategoryNav from '@/components/CategoryNav';
 import { blogListFetch } from '@/utils/blogListFetch';
 

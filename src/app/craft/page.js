@@ -1,5 +1,4 @@
 import React from 'react'
-import { Gabarito } from 'next/font/google'
 
 export const metadata = {
   title: 'craft - Jacob Salvi',
@@ -9,7 +8,7 @@ export const metadata = {
 const page = () => {
   return (
     <div className='w-full h-[100vh] flex justify-center items-center'>
-        <div className=' max-w-[40%] h-fit text-center font-[Gabarito] text-lg tarcking-[-4%] text-[#2a2a2a]/50 font-bold' >
+        <div className=' max-w-[40%] h-fit text-center font-gabarito text-lg tarcking-[-4%] text-[#2a2a2a]/50 font-bold' >
         The work exists.<br/>
         I just haven't found the right way to frame it yet.<br/>
         Give it a little time — it'll show up when it's ready.

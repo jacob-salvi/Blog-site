@@ -149,8 +149,8 @@ const Story3 = () => {
   })
   return (
     <div ref={containerref} className='w-[100vw] h-[100vh] flex flex-col shrink-0 items-center   justify-center z-10'>
-      <div className=' bg-[#fffae7]  w-full leadingText text-6xl  font-[Gabarito] font-bold tracking-[-4%] text-[#2a2a2a]'><span ref={leadingTextRef}  >I often left things</span> <span ref={unfinishref}> Unfinished, </span><span ref={overwhelmedref}> Overwhelmed, </span><span ref={unsureref}> and Un<span ref={sureref}>sure</span> </span></div>
-      <div  ref={descref} className=' flex w-full justify-end font-[DM_Serif_Text] italic text-[#2a2a2a] text-[1.2rem]'>So I started this — not to teach, but to share.</div>
+      <div className=' bg-[#fffae7]  w-full leadingText text-6xl  font-gabarito font-bold tracking-[-4%] text-[#2a2a2a]'><span ref={leadingTextRef}  >I often left things</span> <span ref={unfinishref}> Unfinished, </span><span ref={overwhelmedref}> Overwhelmed, </span><span ref={unsureref}> and Un<span ref={sureref}>sure</span> </span></div>
+      <div  ref={descref} className=' flex w-full justify-end font-dmSerifText italic text-[#2a2a2a] text-[1.2rem]'>So I started this — not to teach, but to share.</div>
     </div>
   )
 }

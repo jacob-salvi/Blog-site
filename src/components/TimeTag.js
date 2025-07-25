@@ -14,7 +14,7 @@ const TimeTag = () => {
     })
 
   return (
-    <div className='font-[Gabarito] w-fit  font-bold text-[1rem] text-[#2a2a2a] flex justify-center items-center '>
+    <div className='font-gabarito w-fit  font-bold text-[1rem] text-[#2a2a2a] flex justify-center items-center '>
       <h1 className='uppercase leading-none tracking-[-4%]'>{time}, <span className='capitalize'>India</span></h1>
     </div>
   )

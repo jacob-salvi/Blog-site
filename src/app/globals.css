@@ -3,14 +3,10 @@
 @import "tailwindcss";
 
 
-
-
-/* @font-face {
-    font-family: 'DMSerif';
-    src: url(/public/fonts/DMSerifText-Regular.ttf) format('truetype');
-    font-weight: bold ;
-    font-style: normal;
-} */
+@theme{
+  --font-gabarito: var(--font-gabarito);
+  --font-dmSerifText: var(--font-dmSerifText);
+}
 
 
 

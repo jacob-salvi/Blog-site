@@ -10,10 +10,10 @@ const LatestBlogCard = ({latest}) => {
         <div className='w-full h-full'>
           <Link href={`/blogs/${latest.slug}`} className='block '>
           <div className='textContainer flex flex-col gap-2 w-fit h-fit'>
-              <div className='blogtag  w-fit h-fit  p-1 bg-[#2a2a2a] text-[#FFF0B3] font-[Gabarito] font-light text-[0.9rem] leading-none tracking-[-2%]'>{latest.tag}</div>
+              <div className='blogtag  w-fit h-fit  p-1 bg-[#2a2a2a] text-[#FFF0B3] font-gabarito font-light text-[0.9rem] leading-none tracking-[-2%]'>{latest.tag}</div>
               <div className='titleDescContainer text-[#2a2a2a] flex flex-col gap-2'>
-                <h3 className='text-[1.2rem] leading-none tracking-[-4%] line-clamp-2 font-[DM_Serif_Text] '>{latest.blogname}</h3>
-                <p className=' text-[#2a2a2a]/50 text-[1rem] leading-none  tracking-[-4%] font-[Gabarito] '>{latest.description}</p>
+                <h3 className='text-[1.2rem] leading-none tracking-[-4%] line-clamp-2 font-dmSerifText '>{latest.blogname}</h3>
+                <p className=' text-[#2a2a2a]/50 text-[1rem] leading-none  tracking-[-4%] font-gabarito '>{latest.description}</p>
               </div>
             </div>
           </Link>
