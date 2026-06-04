@@ -2,6 +2,8 @@ import React from 'react';
 import BlogsCard from '@/components/BlogsCard';
 import CategoryNav from '@/components/CategoryNav';
 import { blogListFetch } from '@/utils/blogListFetch';
+import Piece from '@/components/Piece';
+import Collage from '@/components/Collage';
 
 export  const metadata = {
   title: 'blogs - Jacob Salvi',
@@ -14,13 +16,14 @@ export default async function BlogList() {
       
       return(
         <>
-        <div className='flex flex-col '>
+                  <Collage content={allBlogs}/>
 
-        <CategoryNav/>
+        {/* <div className='flex flex-col '>
         </div>
-        <div className='grid grid-cols-3 px-25'>
+        <div className='grid grid-cols-3 '>
           <BlogsCard Blogs={allBlogs}/>
-        </div>
+          <Collage content={allBlogs}/>
+        </div> */}
         </>
       )
   

@@ -27,7 +27,6 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${gabarito.variable} ${dmSerifText.variable}`}>
       <body >
-        <Navbar/>
         {children}
          <Analytics />
       </body>

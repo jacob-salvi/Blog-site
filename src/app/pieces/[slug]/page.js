@@ -10,7 +10,7 @@ export async function generateMetadata({params}) {
   const { frontmatter } = await fetchMdxData(slug);
 
   return {
-    title: frontmatter.blogname,
+    title: frontmatter.title,
     description: frontmatter.description || '',
   };
 }
@@ -23,11 +23,13 @@ export default async function BlogPage({params}) {
 
     return (
        
-        <div className='main w-[100vw] h-full flex flex-col'>
-            <CategoryNav/>
+        <div className='main w-[100vw] min-h-screen flex flex-col bg-[var(--color-bg)]  '>
+          <div className='max-w-[700px] mx-auto'>
             <Header frontmatter={frontmatter}/>
             <Thumbnail frontmatter={frontmatter}/>
             <Blogbody content={content}/>
+          </div>
+
         </div>
       );
       

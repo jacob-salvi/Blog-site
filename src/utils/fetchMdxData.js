@@ -42,7 +42,6 @@ export  async function fetchMdxData(slug) {
             components: components// pass the components to the compileMDX function
         }) 
    
-        return (
-        {content, frontmatter} // return the content and frontmatter as an object
-    )
+        return  {content, frontmatter} // return the content and frontmatter as an object
+    
 }

@@ -20,6 +20,7 @@ import Callouts from '@/lib/MDXuiElements/callouts';
 import CodeBlock from '@/lib/MDXuiElements/codeblock';
 import WhoAmI from '@/screens/whoAmI';
 import Footer from '@/screens/footer';
+import Piece from '@/components/Piece';
 
 
 
@@ -78,6 +79,7 @@ export default async function BlogList() {
         <Story1/> */}
         </main>
         <Footer/>
+        <Piece/>
 
 
 

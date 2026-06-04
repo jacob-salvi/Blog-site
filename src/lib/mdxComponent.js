@@ -2,6 +2,7 @@
 import { Gabarito, DM_Serif_Text } from "next/font/google";
 import Callouts from "./MDXuiElements/callouts";
 import { Children } from "react";
+import Verse from "./MDXuiElements/verse";
 
 // Import the font (optional — only if you're using next/font properly)
 // const gabarito = Gabarito({ subsets: ["latin"] });
@@ -28,7 +29,7 @@ export const components = {
     <h6 {...props} className="font-dmSerifText italic text-[1.1rem] tracking-[-4%] text-[#2a2a2a]/50 leading-none" />
   ),
   p: (props) => (
-    <p {...props} className="font-gabarito text-[1.2rem] leading-[2rem] tracking-[-4%] font-light text-[#2a2a2a] mb-4" />
+    <p {...props} className="font-gabarito text-[18px] leading-[1.8rem] tracking-[-1%]  mx-auto font-extralight text-[#2a2a2a] mb-4" />
   ),
 
 QuoteText: (props) => (
@@ -37,6 +38,8 @@ QuoteText: (props) => (
   //   ----------------- MDX Components -----------------
   Callouts: Callouts,
   // Add more MDX elements as needed (blockquote, code, ul, li, a, etc.)
+  Verse,
+
 };
 
 export default components;
