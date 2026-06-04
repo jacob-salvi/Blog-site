@@ -3,11 +3,15 @@ import { MDXRemote } from 'next-mdx-remote'
 import React from 'react'
 import { Gabarito, DM_Serif_Text } from 'next/font/google'
 import { ReactLenis, useLenis } from 'lenis/react'
-
+import { useRouter } from 'next/navigation'
 
 
 const BlogBody = ({content}) => {
+    const router = useRouter();
 
+  const handleBack = () => {
+    window.history.length > 1 ? router.back() : router.push('/')
+  }
 
   return (
     <div className='w-full  my-14  px-3 md:px-0  flex flex-col items-center gap-10 '>
