@@ -23,10 +23,10 @@ export const components = {
     <h4 {...props} className="font-dmSerifText text-[2rem] my-6 tracking-[-4%] text-[#2a2a2a] leading-none" />
   ),
   h5: (props) => (
-    <h5 {...props} className="font-gabarito  italic text-[1.1rem] tracking-[-4%] text-[#2a2a2a] leading-none" />
+    <h5 {...props} className="font-dmSerifText text-[1.5rem] my-6 tracking-[-4%] text-[#2a2a2a] leading-none" />
   ),
   h6: (props) => (
-    <h6 {...props} className="font-dmSerifText italic text-[1.1rem] tracking-[-4%] text-[#2a2a2a]/50 leading-none" />
+    <h6 {...props} className="font-dmSerifText italic text-[1rem] tracking-[-4%] text-[#2a2a2a]/50 leading-[32px]" />
   ),
   p: (props) => (
     <p {...props} className="font-gabarito text-[18px] leading-[1.8rem] tracking-[-1%]  mx-auto font-extralight text-[#2a2a2a] mb-4" />
